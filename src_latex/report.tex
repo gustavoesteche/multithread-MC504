@@ -1,0 +1,166 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Explanation of the Baboons Crossing Problem Solution}
+\author{}
+\date{}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  showstringspaces=false,
+  frame=single,
+}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problem Overview}
+
+The problem describes a synchronization challenge where baboons attempt to cross a canyon using a single rope. The constraints are:
+
+\begin{itemize}
+    \item Baboons crossing in opposite directions must not meet on the rope.
+    \item The rope supports at most 5 baboons at a time.
+    \item No starvation: baboons waiting to cross in one direction should eventually get a chance even if there is a continuous stream in the opposite direction.
+\end{itemize}
+
+\section*{Code Explanation}
+
+\subsection*{Global Declarations}
+
+\begin{lstlisting}[language=C]
+#define MAX_BABOONS 100
+#define MAX_BABOONS_ON_ROPE 5
+
+sem_t mutex;
+sem_t leftQueue, rightQueue;
+
+int count = 0;
+int direction = 0;
+int leftWaiting = 0;
+int rightWaiting = 0;
+
+char rope[MAX_BABOONS_ON_ROPE];
+\end{lstlisting}
+
+\textbf{Explanation:}
+\begin{itemize}
+    \item \texttt{MAX\_BABOONS} and \texttt{MAX\_BABOONS\_ON\_ROPE} define the total number of baboons and the rope capacity.
+    \item \texttt{mutex}: a binary semaphore for mutual exclusion.
+    \item \texttt{leftQueue}, \texttt{rightQueue}: semaphores for baboons waiting on each side.
+    \item \texttt{count}: tracks the number of baboons currently on the rope.
+    \item \texttt{direction}: tracks the current direction of crossing (\texttt{0} = none, \texttt{-1} = left-to-right, \texttt{1} = right-to-left).
+    \item \texttt{leftWaiting}, \texttt{rightWaiting}: count baboons waiting to cross from each side.
+    \item \texttt{rope[]}: visual representation of baboons on the rope.
+\end{itemize}
+
+\subsection*{Baboons Crossing Functions}
+
+Two thread functions represent baboons crossing from each side.
+
+\subsubsection*{Left to Right}
+
+\begin{lstlisting}[language=C]
+void* cross_left_to_right(void* arg) {
+    sem_wait(&mutex);
+    leftWaiting++;
+    while (direction == 1 || count == MAX_BABOONS_ON_ROPE) {
+        sem_post(&mutex);
+        sem_wait(&leftQueue);
+        sem_wait(&mutex);
+    }
+    ...
+}
+\end{lstlisting}
+
+\textbf{Explanation:}
+\begin{itemize}
+    \item Baboons wait if direction is the opposite or the rope is full.
+    \item Once safe, direction is set and \texttt{count} is incremented.
+\end{itemize}
+
+After crossing:
+
+\begin{lstlisting}[language=C]
+    count--;
+    rope[count] = ' ';
+    if (count == 0) {
+        direction = 0;
+        if (rightWaiting > 0) {
+            for (int i = 0; i < rightWaiting && i < MAX_BABOONS_ON_ROPE; i++) {
+                sem_post(&rightQueue);
+            }
+        } ...
+    }
+\end{lstlisting}
+
+\textbf{Explanation:}
+\begin{itemize}
+    \item When no baboons are on the rope, the direction is reset.
+    \item Baboons waiting on the opposite side are released, ensuring fairness (prevents starvation).
+\end{itemize}
+
+\subsubsection*{Right to Left}
+
+\begin{lstlisting}[language=C]
+void* cross_right_to_left(void* arg) {
+    sem_wait(&mutex);
+    rightWaiting++;
+    while (direction == -1 || count == MAX_BABOONS_ON_ROPE) {
+        sem_post(&mutex);
+        sem_wait(&rightQueue);
+        sem_wait(&mutex);
+    }
+    ...
+}
+\end{lstlisting}
+
+\textbf{Explanation:}
+\begin{itemize}
+    \item Similar to left-to-right but for the opposite direction.
+    \item Ensures only one direction uses the rope at a time and max 5 baboons.
+\end{itemize}
+
+\subsection*{Main Function}
+
+\begin{lstlisting}[language=C]
+int main() {
+    sem_init(&mutex, 0, 1);
+    sem_init(&leftQueue, 0, 0);
+    sem_init(&rightQueue, 0, 0);
+
+    for (int i = 0; i < MAX_BABOONS; i++) {
+        if (rand() % 2 == 0)
+            pthread_create(&baboons[i], NULL, cross_left_to_right, NULL);
+        else
+            pthread_create(&baboons[i], NULL, cross_right_to_left, NULL);
+    }
+    ...
+}
+\end{lstlisting}
+
+\textbf{Explanation:}
+\begin{itemize}
+    \item Semaphores are initialized.
+    \item Randomly creates threads representing baboons from both sides.
+    \item Waits for all threads to finish and cleans up.
+\end{itemize}
+
+\section*{Mapping to Problem Constraints}
+
+\begin{itemize}
+    \item \textbf{Safety (no fights):} Direction is enforced via the \texttt{direction} variable. Baboons wait if the rope is used in the opposite direction.
+    \item \textbf{Capacity (no breakage):} The \texttt{count} variable ensures no more than 5 baboons are on the rope.
+    \item \textbf{No Starvation:} When rope is empty, baboons on the opposite side are signaled. If none, same-side baboons are allowed.
+\end{itemize}
+
+\end{document}

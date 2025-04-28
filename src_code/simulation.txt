@@ -1,0 +1,310 @@
+
+Estado atual:
+Corda: [L    ]
+baboon 0 | zzz...
+baboon 1 | zzz...
+baboon 2 | zzz...
+baboon 3 | DIREITA -> ESQUERDA
+baboon 4 | zzz...
+baboon 5 | zzz...
+baboon 6 | zzz...
+baboon 7 | zzz...
+baboon 8 | zzz...
+baboon 9 | zzz...
+Esperando à esquerda: 0
+Esperando à direita: 0
+Babuíno indo para a esquerda!
+
+Estado atual:
+Corda: [LL   ]
+baboon 0 | zzz...
+baboon 1 | zzz...
+baboon 2 | zzz...
+baboon 3 | DIREITA -> ESQUERDA
+baboon 4 | zzz...
+baboon 5 | DIREITA -> ESQUERDA
+baboon 6 | zzz...
+baboon 7 | zzz...
+baboon 8 | zzz...
+baboon 9 | zzz...
+Esperando à esquerda: 0
+Esperando à direita: 0
+Babuíno indo para a esquerda!
+
+Estado atual:
+Corda: [LLL  ]
+baboon 0 | zzz...
+baboon 1 | zzz...
+baboon 2 | DIREITA -> ESQUERDA
+baboon 3 | DIREITA -> ESQUERDA
+baboon 4 | zzz...
+baboon 5 | DIREITA -> ESQUERDA
+baboon 6 | ESQUERDA
+baboon 7 | zzz...
+baboon 8 | zzz...
+baboon 9 | zzz...
+Esperando à esquerda: 1
+Esperando à direita: 0
+Babuíno indo para a esquerda!
+
+Estado atual:
+Corda: [LLLL ]
+baboon 0 | zzz...
+baboon 1 | ESQUERDA
+baboon 2 | DIREITA -> ESQUERDA
+baboon 3 | DIREITA -> ESQUERDA
+baboon 4 | zzz...
+baboon 5 | DIREITA -> ESQUERDA
+baboon 6 | ESQUERDA
+baboon 7 | zzz...
+baboon 8 | DIREITA -> ESQUERDA
+baboon 9 | zzz...
+Esperando à esquerda: 2
+Esperando à direita: 0
+Babuíno indo para a esquerda!
+
+Estado atual:
+Corda: [LLLLL]
+baboon 0 | zzz...
+baboon 1 | ESQUERDA
+baboon 2 | DIREITA -> ESQUERDA
+baboon 3 | DIREITA -> ESQUERDA
+baboon 4 | DIREITA -> ESQUERDA
+baboon 5 | DIREITA -> ESQUERDA
+baboon 6 | ESQUERDA
+baboon 7 | zzz...
+baboon 8 | DIREITA -> ESQUERDA
+baboon 9 | zzz...
+Esperando à esquerda: 2
+Esperando à direita: 0
+Babuíno indo para a esquerda!
+
+Estado atual:
+Corda: [LLLL ]
+baboon 0 | DIREITA
+baboon 1 | ESQUERDA
+baboon 2 | DIREITA -> ESQUERDA
+baboon 3 | DIREITA -> ESQUERDA
+baboon 4 | DIREITA -> ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | ESQUERDA
+baboon 7 | ESQUERDA
+baboon 8 | DIREITA -> ESQUERDA
+baboon 9 | DIREITA
+Esperando à esquerda: 3
+Esperando à direita: 2
+
+Estado atual:
+Corda: [LLL  ]
+baboon 0 | DIREITA
+baboon 1 | ESQUERDA
+baboon 2 | DIREITA -> ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | DIREITA -> ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | ESQUERDA
+baboon 7 | ESQUERDA
+baboon 8 | DIREITA -> ESQUERDA
+baboon 9 | DIREITA
+Esperando à esquerda: 3
+Esperando à direita: 2
+
+Estado atual:
+Corda: [LL   ]
+baboon 0 | DIREITA
+baboon 1 | ESQUERDA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | DIREITA -> ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | ESQUERDA
+baboon 7 | ESQUERDA
+baboon 8 | DIREITA -> ESQUERDA
+baboon 9 | DIREITA
+Esperando à esquerda: 3
+Esperando à direita: 2
+
+Estado atual:
+Corda: [L    ]
+baboon 0 | DIREITA
+baboon 1 | ESQUERDA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | ESQUERDA
+baboon 7 | ESQUERDA
+baboon 8 | DIREITA -> ESQUERDA
+baboon 9 | DIREITA
+Esperando à esquerda: 3
+Esperando à direita: 2
+
+Estado atual:
+Corda: [     ]
+baboon 0 | DIREITA
+baboon 1 | ESQUERDA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | ESQUERDA
+baboon 7 | ESQUERDA
+baboon 8 | ESQUERDA
+baboon 9 | DIREITA
+Esperando à esquerda: 3
+Esperando à direita: 2
+
+Estado atual:
+Corda: [R    ]
+baboon 0 | DIREITA
+baboon 1 | ESQUERDA -> DIREITA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | ESQUERDA
+baboon 7 | ESQUERDA
+baboon 8 | ESQUERDA
+baboon 9 | DIREITA
+Esperando à esquerda: 2
+Esperando à direita: 2
+Babuíno indo para a direita!
+
+Estado atual:
+Corda: [RR   ]
+baboon 0 | DIREITA
+baboon 1 | ESQUERDA -> DIREITA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | ESQUERDA -> DIREITA
+baboon 7 | ESQUERDA
+baboon 8 | ESQUERDA
+baboon 9 | DIREITA
+Esperando à esquerda: 1
+Esperando à direita: 2
+Babuíno indo para a direita!
+
+Estado atual:
+Corda: [RRR  ]
+baboon 0 | DIREITA
+baboon 1 | ESQUERDA -> DIREITA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | ESQUERDA -> DIREITA
+baboon 7 | ESQUERDA -> DIREITA
+baboon 8 | ESQUERDA
+baboon 9 | DIREITA
+Esperando à esquerda: 0
+Esperando à direita: 2
+Babuíno indo para a direita!
+
+Estado atual:
+Corda: [RR   ]
+baboon 0 | DIREITA
+baboon 1 | ESQUERDA -> DIREITA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | DIREITA
+baboon 7 | ESQUERDA -> DIREITA
+baboon 8 | ESQUERDA
+baboon 9 | DIREITA
+Esperando à esquerda: 0
+Esperando à direita: 2
+
+Estado atual:
+Corda: [R    ]
+baboon 0 | DIREITA
+baboon 1 | DIREITA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | DIREITA
+baboon 7 | ESQUERDA -> DIREITA
+baboon 8 | ESQUERDA
+baboon 9 | DIREITA
+Esperando à esquerda: 0
+Esperando à direita: 2
+
+Estado atual:
+Corda: [     ]
+baboon 0 | DIREITA
+baboon 1 | DIREITA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | DIREITA
+baboon 7 | DIREITA
+baboon 8 | ESQUERDA
+baboon 9 | DIREITA
+Esperando à esquerda: 0
+Esperando à direita: 2
+
+Estado atual:
+Corda: [L    ]
+baboon 0 | DIREITA
+baboon 1 | DIREITA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | DIREITA
+baboon 7 | DIREITA
+baboon 8 | ESQUERDA
+baboon 9 | DIREITA -> ESQUERDA
+Esperando à esquerda: 0
+Esperando à direita: 1
+Babuíno indo para a esquerda!
+
+Estado atual:
+Corda: [LL   ]
+baboon 0 | DIREITA -> ESQUERDA
+baboon 1 | DIREITA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | DIREITA
+baboon 7 | DIREITA
+baboon 8 | ESQUERDA
+baboon 9 | DIREITA -> ESQUERDA
+Esperando à esquerda: 0
+Esperando à direita: 0
+Babuíno indo para a esquerda!
+
+Estado atual:
+Corda: [L    ]
+baboon 0 | DIREITA -> ESQUERDA
+baboon 1 | DIREITA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | DIREITA
+baboon 7 | DIREITA
+baboon 8 | ESQUERDA
+baboon 9 | ESQUERDA
+Esperando à esquerda: 0
+Esperando à direita: 0
+
+Estado atual:
+Corda: [     ]
+baboon 0 | ESQUERDA
+baboon 1 | DIREITA
+baboon 2 | ESQUERDA
+baboon 3 | ESQUERDA
+baboon 4 | ESQUERDA
+baboon 5 | ESQUERDA
+baboon 6 | DIREITA
+baboon 7 | DIREITA
+baboon 8 | ESQUERDA
+baboon 9 | ESQUERDA
+Esperando à esquerda: 0
+Esperando à direita: 0
