@@ -6,4 +6,4 @@ O projeto aborda o problema 6.3 - *"Baboon crossing problem"* do livro *The Litt
 - Babuínos atravessando a corda em direções opostas não podem se encontrar na corda
 - Os babuínos de um lado eventualmente devem conseguir atravessar para o outro lado *(starvation)*
 
-O arquivo [Report](w1/src_latex/Report.pdf) contêm informações mais detalhadas sobre o problema, a solução encontrada pelo grupo e a explicação do código escrito.
+O arquivo [Report](src_latex/Report.pdf) contêm informações mais detalhadas sobre o problema, a solução encontrada pelo grupo e a explicação do código escrito.
